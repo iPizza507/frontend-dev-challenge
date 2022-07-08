@@ -60,7 +60,9 @@ body{
     background-color: white;
     top: 40px;
     left: 30px;
-    width: 250px;
+    width: 240px;
+    border: solid 1px gray;
+    border-radius: 4px;
     z-index: 1;
     animation-name: deploy;
     animation-duration: 2s;
@@ -192,17 +194,136 @@ body{
     letter-spacing: -0.02em;
     text-align: left;
 }
+/* Form Styles*/
 .container__formulario{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 100px 200px;
 }
 .container__form{
     width: 320px;
-    margin: auto;
+    margin: auto 0px auto 20px ;
     display: flex;
     flex-direction: column;
 }
 .container__home_{
     text-align: center;
     margin: 20px;
+}
+.container__form__email, .container__form__select, .container__form__submit{
+    margin-top: 10px;
+    height: 25px;
+}
+.container__form__textArea{
+    margin-top: 10px;
+}
+.container__form__submit{
+    background-color: #B378FF;
+    border-style: none;
+    border-radius: 4px;
+    color: white;
+}
+.container__form__submit:hover{
+    background-color: #8650cc;
+}
+/*Be Mother*/
+.cards__toBeMother{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 50px;
+}
+.card{
+    width: 200px;
+    border-radius: 4px;  
+    margin: 0 auto;
+    box-shadow: 10px 10px 20px gray;
+}
+
+.card:hover{
+    position: relative;
+    top: 0;
+    left: 0;
+    animation: opacityCard 2s;
+}
+@keyframes opacityCard {
+    from{
+        opacity: 0.5;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.card__img{
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+}
+.card__body__h6{
+    margin: 0 0 10px 5px;
+    color: #F778B9;
+}
+.card__body__h5{
+    margin: 5px;
+}
+.card__body__p{
+    margin: 5px;
+    font-size: 15px;
+}
+/*Media Querys*/
+@media all and (max-width: 599px){
+     /* Header Styles*/
+    .navBar__search{
+        border-style: none;
+    }
+    #searchDeployment{
+        display: none !important;
+    }
+     /* Home Styles*/
+    .container__text{
+        width: 100px;
+        height: 100px;
+    }
+    .container__text__h1{
+        font-size: 15px;
+        line-height: 15px;
+    }
+    .container__text__h3{
+        font-size: 10px;
+        line-height: 15px;
+    } 
+    .container__text--right{
+        width: 100px;
+    }
+    .container__text__p{
+        font-size: 8px;
+        line-height: 8px;
+    }
+    /* Footer Styles*/
+    .footer__context{
+        flex-direction: column;
+    }
+    .footer__context__img{
+        margin-top: 20px;
+    }
+    
+    .footer__context__list li{
+        margin: 5px;
+    }
+    
+    .container__formulario{
+        margin: 10px 10px;
+    }
+    .container__formulario h1{
+        margin: 10px;
+        text-align: center;
+    }
+    /*Be Mother*/
+    .cards__toBeMother{
+        grid-template-columns: repeat(1, 1fr);
+        margin: 20px;
+        gap: 1em;
+    }
+    .card{
+        width: 90%;
+    }
 }

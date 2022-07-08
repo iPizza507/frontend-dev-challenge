@@ -2,14 +2,16 @@ export const Form = () => {
   return (
     <>
       <div className="container__formulario">
-        <h1>
-          ¿Te quedaste con ganas de saber más o simplemente queres aportar algo?
-          ¡Déjanos tús comentarios!
-        </h1>
+        <h1>¿Te quedaste con ganas de saber más?</h1>
+        <h2>¡Déjanos tús comentarios!</h2>
         <form action="#" className="container__form">
-          <input type="email" placeholder="Inserte tu: correo"></input>
+          <input
+            className="container__form__email"
+            type="email"
+            placeholder="Inserte tu: correo"
+          ></input>
 
-          <select>
+          <select className="container__form__select">
             <option selected option="mama">
               Mamá
             </option>
@@ -17,12 +19,16 @@ export const Form = () => {
             <option option="niguno">Ninguno</option>
           </select>
           <textarea
+            className="container__form__textArea"
             id="message"
             cols="40"
             rows="10"
             required
             placeholder="Message"
           ></textarea>
+          <button className="container__form__submit" type="submit">
+            Enviar
+          </button>
         </form>
       </div>
     </>
