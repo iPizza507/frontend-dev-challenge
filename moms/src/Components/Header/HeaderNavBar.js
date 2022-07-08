@@ -8,7 +8,7 @@ import {
 import { useState } from "react";
 //img
 import myLogo from "../../images/Logo.png";
-import lupa from "../../images/lupa.png";
+import lupa from "../../images/lupa-withe.png";
 export const HeaderNavBar = () => {
   const [icon, setIcon] = useState(AiOutlineMenu);
 
@@ -21,14 +21,6 @@ export const HeaderNavBar = () => {
     } else {
       menuDeployment.style.display = "block";
       setIcon(AiOutlineClose);
-    }
-  };
-  const moveSearch = () => {
-    let searchDeployment = document.getElementById("searchDeployment");
-    if (searchDeployment.style.display === "block") {
-      searchDeployment.style.display = "none";
-    } else {
-      searchDeployment.style.display = "block";
     }
   };
   return (
@@ -46,7 +38,7 @@ export const HeaderNavBar = () => {
                 <li>
                   <Link
                     className="listMenuHambur__link listMenuHambur__link--color"
-                    to="/"
+                    to="/iWantToBeaMother"
                   >
                     Quiero ser mamá
                   </Link>
@@ -55,7 +47,7 @@ export const HeaderNavBar = () => {
                 <li>
                   <Link
                     className="listMenuHambur__link listMenuHambur__link--color"
-                    to="/moms"
+                    to="/beMom"
                   >
                     Voy a ser mamá
                   </Link>
@@ -64,7 +56,7 @@ export const HeaderNavBar = () => {
                 <li>
                   <Link
                     className="listMenuHambur__link listMenuHambur__link--color"
-                    to="#"
+                    to="/form"
                   >
                     Parto
                   </Link>
@@ -97,7 +89,7 @@ export const HeaderNavBar = () => {
                 <li>
                   <Link
                     className="listMenuHambur__link listMenuHambur__link--color"
-                    to="#"
+                    to="/form"
                   >
                     Educación para niños
                   </Link>
@@ -108,12 +100,16 @@ export const HeaderNavBar = () => {
           </div>
         </div>
         <div className="navBar__logo">
-          <img className="logo__img" src={myLogo} alt="Una imagen central" />
+          <Link to="/">
+            <img className="logo__img" src={myLogo} alt="Una imagen central" />
+          </Link>
         </div>
 
         <div className="navBar__search">
-          <input type="search" id="searchDeployment" />
-          <img src={lupa} alt="una img" onClick={moveSearch} />
+          <input type="search" id="searchDeployment" placeholder="Buscar.." />
+          <button type="submit" className="navBar__search__submit">
+            <img className="navBar__search__img" src={lupa} alt="una img" />
+          </button>
         </div>
       </nav>
     </>

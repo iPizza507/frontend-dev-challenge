@@ -19,6 +19,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Source Sans Pro';
 }
 .navBar{
     display: flex;
@@ -61,15 +62,55 @@ body{
     left: 30px;
     width: 250px;
     z-index: 1;
+    animation-name: deploy;
+    animation-duration: 2s;
+}
+
+@keyframes deploy {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.navBar__search{
+    display: flex;
+    align-items: center;
+    border: solid 1px;
+    border-radius: 4px;
+    height: 28px;
+    border-color: rgb(152, 152, 152);
 }
 #searchDeployment{
-    display: none;
-    position: absolute;
-    top: 12px;
-    right: 80px;
+    position: relative;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border-style: none;
+    width: 100px;
+    height: 20px;
 }
+.navBar__search__submit{
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    border-style: none;
+    display: flex;
+    align-items: center;
+}
+.navBar__search__img{
+    background-color: #B378FF;
+    border-radius: 2px;
+    margin: 2px;
+    padding: 2px;
+    color: white;
+
+}
+
+
 /* Footer Styles*/
-.footer, .context__list__Link--color{
+.footer{
     background-color: #265E6C;
     color: white;
 }
@@ -99,7 +140,6 @@ body{
 .context__list__Link:hover{
     text-decoration: underline;
     text-decoration-color: white;
-    
 }
 /* Container Styles*/
 .container{
@@ -111,4 +151,58 @@ body{
     position: absolute;
     top: 15%;
     left: 10%;
+    width: 300px;
+}
+.container__text--right{
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    width: 300px;
+    text-align: right;
+}
+ .context__list__Link--color, .text--color{
+    color: white;
+}
+
+.container__text__h1, .container__text__h3{
+    font-family: 'Source Sans Pro';
+    font-weight: bold;
+}
+
+.container__text__h1{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+}
+.container__text__h1__p{
+    margin: 0;
+    display: inline;
+    color: #F778B9;
+}
+
+.container__text__h3{
+    font-size: 24px;
+}
+.container__text__p{
+    font-family: 'Source Code Pro';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+.container__formulario{
+    display: flex;
+    margin: 100px 200px;
+}
+.container__form{
+    width: 320px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.container__home_{
+    text-align: center;
+    margin: 20px;
 }
