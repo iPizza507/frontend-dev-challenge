@@ -207,6 +207,22 @@ body{
     margin: 5px;
     padding: 5px;
 }
+.container__modal{
+    margin: auto;
+    position: fixed;
+    top: 30%;
+    left: 30%;
+    width: 300px;
+    background-color: white;
+    z-index: 1;
+    animation: opacityCard 2s;
+    align-items: center;
+}
+.card__body__button--close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
 
 /* Form Styles*/
 .container__formulario{
@@ -284,16 +300,6 @@ body{
     margin: 5px;
     font-size: 15px;
 }
-.container__modal{
-    margin: auto;
-    position: fixed;
-    top: 30%;
-    left: 30%;
-    width: 300px;
-    background-color: #8650cc;
-    z-index: 1;
-}
-
 /*Media Querys*/
 @media all and (max-width: 599px){
      /* Header Styles*/
@@ -322,6 +328,14 @@ body{
     .container__text__p{
         font-size: 8px;
         line-height: 8px;
+    }
+    .cards__home{
+        grid-template-columns: repeat(1, 1fr);
+        margin: 25px;
+    }
+    .container__modal{
+        top: 30%;
+        left: 2%;
     }
     /* Footer Styles*/
     .footer__context{

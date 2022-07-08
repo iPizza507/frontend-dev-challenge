@@ -5,7 +5,6 @@ import HeaderNavBar from "./Components/Header/HeaderNavBar";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home";
 import Form from "./Components/Form";
-import BeMom from "./Components/BeMom";
 import WantToBeaMother from "./Components/WantToBeaMother";
 //Styles
 import "./css/styles.css";
@@ -18,7 +17,6 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
           <Route path="/form" element={<Form />}></Route>
-          <Route path="/beMom" element={<BeMom />}></Route>
           <Route path="/iWantToBeaMother" element={<WantToBeaMother />}></Route>
         </Routes>
         <Footer />

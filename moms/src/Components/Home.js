@@ -12,6 +12,7 @@ export const Home = () => {
     switch (e.id) {
       case 0:
         crearElemnt(e);
+
         break;
       case 1:
         crearElemnt(e);
@@ -29,6 +30,7 @@ export const Home = () => {
     function crearElemnt() {
       //search parent elemt
       let home = document.getElementById("Home");
+
       //create children element
       let modal = document.createElement("div");
       modal.setAttribute("id", "container__modal");
@@ -39,6 +41,11 @@ export const Home = () => {
       title.setAttribute("class", "card__body__h1");
       title.innerText = "Aca Hay mucha informacion del card.. " + e.name;
       modal.appendChild(title);
+
+      let but = document.createElement("button");
+      but.setAttribute("class", "card__body__button card__body__button--close");
+      but.innerText = "X";
+      modal.appendChild(but);
     }
   };
 
