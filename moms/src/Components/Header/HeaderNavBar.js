@@ -1,14 +1,17 @@
 //Dependency
 import { Link } from "react-router-dom";
+//icons
 import {
   AiOutlineMenu,
   AiOutlineClose,
   AiOutlineArrowRight,
 } from "react-icons/ai";
+//state
 import { useState } from "react";
 //img
 import myLogo from "../../images/Logo.png";
 import lupa from "../../images/lupa-withe.png";
+
 export const HeaderNavBar = () => {
   const [icon, setIcon] = useState(AiOutlineMenu);
 
@@ -40,27 +43,33 @@ export const HeaderNavBar = () => {
                     className="listMenuHambur__link listMenuHambur__link--color"
                     to="/iWantToBeaMother"
                   >
-                    Quiero ser mamá
+                    Quiero ser mamá <AiOutlineArrowRight />
                   </Link>
-                  <AiOutlineArrowRight />
                 </li>
                 <li>
                   <Link
                     className="listMenuHambur__link listMenuHambur__link--color"
                     to="/beMom"
                   >
-                    Voy a ser mamá
+                    Voy a ser mamá <AiOutlineArrowRight />
                   </Link>
-                  <AiOutlineArrowRight />
+                </li>
+                <li>
+                  <Link
+                    className="listMenuHambur__link listMenuHambur__link--color"
+                    to="#"
+                  >
+                    Parto <AiOutlineArrowRight />
+                  </Link>
                 </li>
                 <li>
                   <Link
                     className="listMenuHambur__link listMenuHambur__link--color"
                     to="/form"
                   >
-                    Parto
+                    Consultas
+                    <AiOutlineArrowRight />
                   </Link>
-                  <AiOutlineArrowRight />
                 </li>
               </ul>
             </div>
@@ -74,8 +83,8 @@ export const HeaderNavBar = () => {
                     to="#"
                   >
                     Aprende a ser mamá
+                    <AiOutlineArrowRight />
                   </Link>
-                  <AiOutlineArrowRight />
                 </li>
                 <li>
                   <Link
@@ -83,8 +92,8 @@ export const HeaderNavBar = () => {
                     to="#"
                   >
                     Educación para bebes
+                    <AiOutlineArrowRight />
                   </Link>
-                  <AiOutlineArrowRight />
                 </li>
                 <li>
                   <Link
@@ -92,8 +101,8 @@ export const HeaderNavBar = () => {
                     to="/form"
                   >
                     Educación para niños
+                    <AiOutlineArrowRight />
                   </Link>
-                  <AiOutlineArrowRight />
                 </li>
               </ul>
             </div>

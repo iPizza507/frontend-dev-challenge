@@ -26,9 +26,21 @@
 </head>
 
 <body>
-  <div id="root">
+  <div id="root" onClick="cerrar()">
 
   </div>
+  <script>
+    const cerrar = () => {
+      let home = document.getElementById("Home")
+      let elem = document.getElementById("container__modal")
+      if (elem) {
+        console.log("existe, elminar..");
+        home.removeChild(elem);
+        return
+      }
+      console.log("no existe");
+    };
+  </script>
 </body>
 
 </html>

@@ -4,10 +4,47 @@ import myBgImgBeMom from "../images/background_1.png";
 import myBgImgMom from "../images/background_2.png";
 import myBgchildren from "../images/background_3.png";
 import myQuotes from "../images/comillas.png";
+import ImgForModals from "../images/ImgForModals";
+
 export const Home = () => {
+  const openModal = (e) => {
+    //search for id
+    switch (e.id) {
+      case 0:
+        crearElemnt(e);
+        break;
+      case 1:
+        crearElemnt(e);
+        break;
+      case 2:
+        crearElemnt(e);
+        break;
+      case 3:
+        crearElemnt(e);
+        break;
+      default:
+        break;
+    }
+
+    function crearElemnt() {
+      //search parent elemt
+      let home = document.getElementById("Home");
+      //create children element
+      let modal = document.createElement("div");
+      modal.setAttribute("id", "container__modal");
+      modal.setAttribute("class", "container__modal");
+      home.appendChild(modal);
+      //create text children element
+      let title = document.createElement("h1");
+      title.setAttribute("class", "card__body__h1");
+      title.innerText = "Aca Hay mucha informacion del card.. " + e.name;
+      modal.appendChild(title);
+    }
+  };
+
   return (
     <>
-      <div className="container">
+      <div className="container" id="Home">
         <img className="logo__img" src={myBgImg} alt=""></img>
         <div className="container__text">
           <h1 className="text--color container__text__h1">
@@ -65,6 +102,22 @@ export const Home = () => {
             <br /> profesionales con licencia!
           </h3>
         </div>
+      </div>
+      <div className="cards__home">
+        {ImgForModals.map((e) => (
+          <div className="card" key={e.id}>
+            <img className="card__img" src={e.url} alt="" />
+            <div className="card__body card__body--center">
+              <h5 className="card__body__h5">{e.name}</h5>
+              <button
+                className="card__body__button"
+                onClick={() => openModal(e)}
+              >
+                Mas Info
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
       <div className="container__home_">
         <img src={myQuotes} alt=""></img>
