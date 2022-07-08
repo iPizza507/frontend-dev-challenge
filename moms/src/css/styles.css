@@ -13,7 +13,64 @@
 .button__send--form {
 
 }*/
-.containerMoms{
-    height: 700px;
-    background-color: red;
+
+/* Header Styles*/
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 40px;
+}
+.listMenuHambur__title{
+    color: #B378FF;
+    margin: 15px 0px 5px 16px;
+}
+.listMenuHambur__hr{
+    margin: 0 16px;
+}
+.listMenuHambur__list{
+    list-style: none;
+    padding: 0;
+    margin: 5px 16px 5px 16px;
+}
+.listMenuHambur__list li{
+    display: flex;
+    justify-content: space-between;
+}
+.listMenuHambur__link{
+    text-decoration: none;
+    text-decoration-color: none;
+}
+.logo__img{
+    width: 100%;
+}
+#menuDeployment{
+    position: absolute;
+    background-color: white;
+    top: 40px;
+    left: 30px;
+    width: 250px;
+    z-index: 1;
+}
+#searchDeployment{
+    position: absolute;
+    top: 12px;
+    right: 80px;
+}
+
+/* Container Styles*/
+.container{
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+.container__text{
+    position: absolute;
+    top: 15%;
+    left: 10%;
 }
