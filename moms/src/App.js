@@ -1,6 +1,5 @@
 //Dependency
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 //Components
 import HeaderNavBar from "./Components/Header/HeaderNavBar";
 import Footer from "./Components/Footer/Footer";
@@ -15,7 +14,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
         </Routes>
-        <Footer></Footer>
+        <Footer />
       </BrowserRouter>
     </>
   );

@@ -15,48 +15,57 @@ export const HeaderNavBar = () => {
   //if u click, show them.
   const moveMenu = () => {
     let menuDeployment = document.getElementById("menuDeployment");
-    if (menuDeployment.style.display === "none") {
-      menuDeployment.style.display = "block";
+    if (menuDeployment.style.display === "block") {
+      menuDeployment.style.display = "none";
       setIcon(AiOutlineMenu);
     } else {
-      menuDeployment.style.display = "none";
+      menuDeployment.style.display = "block";
       setIcon(AiOutlineClose);
     }
   };
   const moveSearch = () => {
     let searchDeployment = document.getElementById("searchDeployment");
-    if (searchDeployment.style.display === "none") {
-      searchDeployment.style.display = "block";
-    } else {
+    if (searchDeployment.style.display === "block") {
       searchDeployment.style.display = "none";
+    } else {
+      searchDeployment.style.display = "block";
     }
   };
   return (
     <>
       <nav className="navBar">
         <div className="navBar__menuHambur">
-          <Link to="#" onClick={moveMenu}>
+          <Link to="#" onClick={() => moveMenu()}>
             {icon}
           </Link>
           <div className="navBar__listMenuHambur" id="menuDeployment">
             <div className="listMenuHambur__division">
               <h3 className="listMenuHambur__title">Embarazo</h3>
               <hr className="listMenuHambur__hr"></hr>
-              <ul className="listMenuHambur__list">
+              <ul className="listMenuHambur__list ">
                 <li>
-                  <Link className="listMenuHambur__link" to="/">
+                  <Link
+                    className="listMenuHambur__link listMenuHambur__link--color"
+                    to="/"
+                  >
                     Quiero ser mamá
                   </Link>
                   <AiOutlineArrowRight />
                 </li>
                 <li>
-                  <Link className="listMenuHambur__link" to="/moms">
+                  <Link
+                    className="listMenuHambur__link listMenuHambur__link--color"
+                    to="/moms"
+                  >
                     Voy a ser mamá
                   </Link>
                   <AiOutlineArrowRight />
                 </li>
                 <li>
-                  <Link className="listMenuHambur__link" to="#">
+                  <Link
+                    className="listMenuHambur__link listMenuHambur__link--color"
+                    to="#"
+                  >
                     Parto
                   </Link>
                   <AiOutlineArrowRight />
@@ -66,21 +75,30 @@ export const HeaderNavBar = () => {
             <div className="listMenuHambur__division">
               <h3 className="listMenuHambur__title">Educación</h3>
               <hr className="listMenuHambur__hr"></hr>
-              <ul className="listMenuHambur__list">
+              <ul className="listMenuHambur__list listMenuHambur__link--color">
                 <li>
-                  <Link className="listMenuHambur__link" to="#">
+                  <Link
+                    className="listMenuHambur__link listMenuHambur__link--color"
+                    to="#"
+                  >
                     Aprende a ser mamá
                   </Link>
                   <AiOutlineArrowRight />
                 </li>
                 <li>
-                  <Link className="listMenuHambur__link" to="#">
+                  <Link
+                    className="listMenuHambur__link listMenuHambur__link--color"
+                    to="#"
+                  >
                     Educación para bebes
                   </Link>
                   <AiOutlineArrowRight />
                 </li>
                 <li>
-                  <Link className="listMenuHambur__link" to="#">
+                  <Link
+                    className="listMenuHambur__link listMenuHambur__link--color"
+                    to="#"
+                  >
                     Educación para niños
                   </Link>
                   <AiOutlineArrowRight />
