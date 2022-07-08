@@ -49,7 +49,7 @@ export const HeaderNavBar = () => {
                 <li>
                   <Link
                     className="listMenuHambur__link listMenuHambur__link--color"
-                    to="/beMom"
+                    to="#"
                   >
                     Voy a ser mamá <AiOutlineArrowRight />
                   </Link>
