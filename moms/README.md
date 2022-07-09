@@ -1,5 +1,6 @@
 ## Dependencias:
 
+npm i sass // para poder usar sass
 npm install react-icons // para poder usar iconos
 npm install react-router-dom // para poder usar la navegacion
 npm start //para iniciar la app

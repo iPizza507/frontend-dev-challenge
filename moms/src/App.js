@@ -6,8 +6,10 @@ import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home";
 import Form from "./Components/Form";
 import WantToBeaMother from "./Components/WantToBeaMother";
+
 //Styles
-import "./css/styles.css";
+//import "./css/styles.css";
+import "./css/styles.scss";
 
 function App() {
   return (

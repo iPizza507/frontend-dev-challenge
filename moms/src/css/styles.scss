@@ -1,0 +1,367 @@
+/* example class names 
+.button__send {
+  &--news {
+
+  }
+
+  &--form {
+
+  }
+  &:hover {
+
+  }
+}
+*/
+
+//#B378FF F778B9
+$color_violet : #B378FF;
+$color_rose : #F778B9 ;
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro';
+}
+/* Header Styles*/
+
+.navBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 40px;
+  padding: 5px 0px;
+  .listMenuHambur__title{
+    color: $color_violet;
+    margin: 15px 0px 5px 16px;
+  }
+  .listMenuHambur__hr{
+    margin: 0 16px;
+  }
+  .listMenuHambur__list, .footer__context__list{
+    list-style: none;
+    padding: 0;
+    margin: 5px 16px 5px 16px;
+  }
+  .listMenuHambur__link, .context__list__Link{
+    text-decoration: none;
+    text-decoration-color: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .listMenuHambur__link--color{
+    color: black;
+  }
+  .listMenuHambur__link:hover{
+    text-decoration: underline;
+    text-decoration-color: $color_violet;
+  }
+  #menuDeployment{
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 40px;
+    left: 30px;
+    width: 240px;
+    border: solid 1px gray;
+    border-radius: 4px;
+    z-index: 1;
+    animation-name: deploy;
+    animation-duration: 2s;
+  }
+  @keyframes deploy {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+  }
+}
+
+.logo__img{
+  width: 100%;
+}
+.navBar__search{
+  display: flex;
+  align-items: center;
+  border: solid 1px;
+  border-radius: 4px;
+  height: 28px;
+  border-color: rgb(152, 152, 152);
+  #searchDeployment{
+    position: relative;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border-style: none;
+    width: 100px;
+    height: 20px;
+  }
+  .navBar__search__submit{
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    border-style: none;
+    display: flex;
+    align-items: center;
+  }
+  .navBar__search__img{
+    background-color: $color_violet;
+    border-radius: 2px;
+    margin: 2px;
+    padding: 2px;
+    color: white;
+  }
+}
+
+
+/* Footer Styles*/
+.footer{
+  background-color: #265E6C;
+  color: white;
+
+  .footer__context{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    .footer__context__img{
+      height: 100%;
+      margin: 0 20px;
+    }
+    .footer__division__img{
+      width: 88%;
+    }
+    .footer__context__list li{
+      margin: 20px;
+
+      .context__list__Link:hover{
+        text-decoration: underline;
+        text-decoration-color: white;
+      }
+    }
+    .footer__context__list--display{
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .footer__context--margin{
+  margin: 0 15%;
+  }
+}
+
+
+/* Container Styles*/
+.container{
+  position: relative;
+  top: 0px;
+  left: 0px;
+} 
+.container__home{
+  text-align: center;
+  margin: 20px;
+}
+.container__text{
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 300px;
+}
+.container__text__h1{
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+}
+.container__text__h1__p{
+  margin: 0;
+  display: inline;
+  color: $color_rose ;
+}
+.container__text__h3{
+  font-size: 24px;
+}
+.container__text__p{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+.context__list__Link--color, .text--color{
+  color: white;
+}
+.container__text--right{
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  width: 300px;
+  text-align: right;
+}
+.cards__home{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 50px;
+  gap: 1em;
+}  
+.card__body__button{
+  margin: 5px;
+  padding: 5px;
+}
+.container__modal{
+  margin: auto;
+  position: fixed;
+  top: 30%;
+  left: 38%;
+  width: 300px;
+  background-color: white;
+  z-index: 1;
+  animation: opacityCard 2s;
+  align-items: center;
+}
+.card__body__button--close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+/* Form Styles*/
+.container__formulario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 200px;
+  .container__form{
+    width: 320px;
+    margin: auto 0px auto 20px ;
+    display: flex;
+    flex-direction: column;
+  }
+  .container__form__email, .container__form__select, .container__form__submit{
+    margin-top: 10px;
+    height: 25px;
+  }
+  .container__form__textArea{
+    margin-top: 10px;
+  }
+  
+  .container__form__submit:hover{
+    background-color: #8650cc;
+  }
+}
+.container__form__submit, .card__body__button{
+    background-color: $color_violet;
+    border-style: none;
+    border-radius: 4px;
+    color: white;
+  }
+/*Be Mother*/
+.cards__toBeMother{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 50px;
+  .card{
+    width: 200px;
+    border-radius: 4px;  
+    margin: 0 auto;
+    box-shadow: 10px 10px 20px gray;
+  }
+  .card:hover{
+    position: relative;
+    top: 0;
+    left: 0;
+    animation: opacityCard 2s;
+  }
+  @keyframes opacityCard {
+    from{
+        opacity: 0.5;
+    }
+    to{
+        opacity: 1;
+    }
+  }
+  .card__img{
+    width: 100%;
+    height: 150px;
+    border-radius: 4px 4px 0 0;
+  }
+  .card__body__h6{
+    margin: 0 0 10px 5px;
+    color: $color_rose ;
+  }
+  .card__body__h5{
+    margin: 5px;
+  }
+  .card__body__p{
+    margin: 5px;
+    font-size: 15px;
+  }
+}
+
+/*Media Querys*/
+@media all and (max-width: 599px){
+   /* Header Styles*/
+  .navBar__search{
+      border-style: none;
+  }
+  #searchDeployment{
+      display: none !important;
+  }
+   /* Home Styles*/
+  .container__text{
+      width: 100px;
+      height: 100px;
+  }
+  .container__text__h1{
+      font-size: 15px;
+      line-height: 15px;
+  }
+  .container__text__h3{
+      font-size: 10px;
+      line-height: 15px;
+  } 
+  .container__text--right{
+      width: 100px;
+  }
+  .container__text__p{
+      font-size: 8px;
+      line-height: 8px;
+  }
+  .cards__home{
+      grid-template-columns: repeat(1, 1fr);
+      margin: 25px;
+  }
+  .container__modal{
+      top: 30%;
+      left: 2%;
+  }
+  /* Footer Styles*/
+  .footer__context{
+      flex-direction: column;
+  }
+  .footer__context__img{
+      margin-top: 20px;
+  }
+  
+  .footer__context__list li{
+      margin: 5px;
+  }
+  
+  .container__formulario{
+      margin: 10px 10px;
+  }
+  .container__formulario h1{
+      margin: 10px;
+      text-align: center;
+  }
+  /*Be Mother*/
+  .cards__toBeMother{
+      grid-template-columns: repeat(1, 1fr);
+      margin: 20px;
+      gap: 1em;
+  }
+  .card{
+      width: 90%;
+  }
+}

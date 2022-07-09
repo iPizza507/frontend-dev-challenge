@@ -72,7 +72,7 @@ export const Home = () => {
       </div>
       <div className="container">
         <img className="logo__img" src={myBgImgMom} alt=""></img>
-        <div className="container__text--right">
+        <div className=" container__text--right">
           <h1 className="text--color container__text__h1">
             Educación <p className="container__text__h1__p">para niños</p>. La
             mejor enseñanza.
@@ -126,7 +126,7 @@ export const Home = () => {
           </div>
         ))}
       </div>
-      <div className="container__home_">
+      <div className="container__home">
         <img src={myQuotes} alt=""></img>
         <p>
           Me gustaría agradecer al sitio, me ayudó de una manera inimaginable,
