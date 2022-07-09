@@ -10,7 +10,7 @@ export const Footer = () => {
       <div className="footer">
         <div className="footer__context footer__context--margin">
           <img className="footer__context__img" src={imgFooter} alt=""></img>
-          <p className="footer__context__text">
+          <p className="footer__context__p">
             La Mente es Maravillosa is a property of Grupo MContigo© <br />
             2012 – 2020. All rights reserved. <br />
             Los contenidos de esta publicación se redactan solo con fines

@@ -42,8 +42,12 @@ export const GiveBirth = () => {
             para clase, tiempo para los amigos, juegos, etc.).
           </h3>
         </div>
-        <div>
-          <img className="logo__img" src={myLogoEs} alt=""></img>
+        <div className="container__giveBirth__footer">
+          <img
+            className="container__giveBirth__footer__img"
+            src={myLogoEs}
+            alt=""
+          ></img>
         </div>
       </div>
     </>

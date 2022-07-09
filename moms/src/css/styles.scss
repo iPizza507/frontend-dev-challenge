@@ -116,43 +116,40 @@ body{
     color: white;
   }
 }
-
-
 /* Footer Styles*/
 .footer{
   background-color: #265E6C;
   color: white;
-
-  .footer__context{
+}
+.footer__context{
   display: flex;
   align-items: center;
   justify-content: center;
-    .footer__context__img{
-      height: 100%;
-      margin: 0 20px;
-    }
-    .footer__division__img{
-      width: 88%;
-    }
-    .footer__context__list li{
-      margin: 20px;
-
-      .context__list__Link:hover{
-        text-decoration: underline;
-        text-decoration-color: white;
-      }
-    }
-    .footer__context__list--display{
-      display: flex;
-      flex-direction: row;
-    }
-  }
-
-  .footer__context--margin{
-  margin: 0 15%;
-  }
 }
-
+.footer__context__img{
+  height: 100%;
+  margin: 0 20px;
+}
+.footer__division__img{
+  width: 88%;
+}
+.footer__context__list{
+  list-style: none;
+}
+.footer__context__list li{
+  margin: 20px;
+}
+.context__list__Link:hover{
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+.footer__context__list--display{
+  display: flex;
+  flex-direction: row;
+}
+.footer__context--margin{
+  margin: 0 15%;
+}
 
 /* Container Styles*/
 .container{
@@ -414,5 +411,40 @@ body{
   }
   .card{
       width: 90%;
+  }
+  /*Parto*/
+  .container__giveBirth{
+    width: 100%;
+    flex-direction: column;
+    margin: 10px 0;
+
+    .container__giveBirth__img{
+      width: 92%;
+      height: 85%;
+      opacity: 1;
+      margin: 0;
+      position: static;
+      animation-name: none;
+    }
+    .container__giveBirth__img:hover{
+      animation-play-state: paused;
+    }
+    .container__giveBirth__body{
+      text-align: center;
+      width: 90%;
+      margin: 20px 0;
+      .container__giveBirth__h1{
+        font-size: 20px;
+        color: $color_blue;
+        margin: 0;
+      }
+      .container__giveBirth__h3{
+        font-size: 12px;
+      }
+      
+    }
+    .container__giveBirth__footer__img{
+      width: 200px;
+    }
   }
 }
