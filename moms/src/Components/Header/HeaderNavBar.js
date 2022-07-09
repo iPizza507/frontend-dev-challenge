@@ -57,7 +57,7 @@ export const HeaderNavBar = () => {
                 <li>
                   <Link
                     className="listMenuHambur__link listMenuHambur__link--color"
-                    to="#"
+                    to="/giveBirth"
                   >
                     Parto <AiOutlineArrowRight />
                   </Link>

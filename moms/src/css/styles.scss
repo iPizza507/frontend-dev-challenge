@@ -16,6 +16,7 @@
 //#B378FF F778B9
 $color_violet : #B378FF;
 $color_rose : #F778B9 ;
+$color_blue : #486DB7;
 
 body{
   margin: 0;
@@ -261,44 +262,94 @@ body{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 50px;
-  .card{
-    width: 200px;
-    border-radius: 4px;  
-    margin: 0 auto;
-    box-shadow: 10px 10px 20px gray;
-  }
-  .card:hover{
-    position: relative;
-    top: 0;
-    left: 0;
-    animation: opacityCard 2s;
-  }
-  @keyframes opacityCard {
-    from{
-        opacity: 0.5;
-    }
-    to{
-        opacity: 1;
-    }
-  }
-  .card__img{
-    width: 100%;
-    height: 150px;
-    border-radius: 4px 4px 0 0;
-  }
-  .card__body__h6{
-    margin: 0 0 10px 5px;
-    color: $color_rose ;
-  }
-  .card__body__h5{
-    margin: 5px;
-  }
-  .card__body__p{
-    margin: 5px;
-    font-size: 15px;
-  }
 }
 
+.card{
+  width: 200px;
+  border-radius: 4px;  
+  margin: 0 auto;
+  box-shadow: 10px 10px 20px gray;
+  text-align: center;
+}
+.card:hover{
+  position: relative;
+  top: 0;
+  left: 0;
+  animation-name: opacityCard;
+  animation-duration: 2s;
+}
+@keyframes opacityCard {
+  from{
+      opacity: 0.5;
+  }
+  to{
+      opacity: 1;
+  }
+}
+.card__img{
+  width: 100%;
+  height: 150px;
+  border-radius: 4px 4px 0 0;
+}
+.card__body__h6{
+  margin: 0 0 10px 5px;
+  color: $color_rose ;
+}
+.card__body__h5{
+  margin: 5px;
+}
+.card__body__p{
+  margin: 5px;
+  font-size: 15px;
+}
+
+/*Parto*/
+.container__giveBirth{
+  margin: 30px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  
+  .container__giveBirth__img{
+    width: 460px;
+    height: 360px;
+    position: absolute;
+    top: 0;
+    left: 15px;
+  }
+  .container__giveBirth__img:hover{
+    animation-name: moveImg;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes moveImg{
+    from{
+      transform: translateX(0);
+    }
+    to{
+      transform: translateX(103%);
+    }
+  }
+  .container__giveBirth__body{
+    width: 520px;
+    margin: 0 20px;
+    .container__giveBirth__h1{
+      color: $color_blue;
+      margin: 0;
+    }
+    .container__giveBirth__h3{
+      font-size: 18px;
+      margin: 0;
+      .container__giveBirth__h3__p{
+        display: inline;
+        color: $color_violet;
+      }
+    }
+  }
+}
 /*Media Querys*/
 @media all and (max-width: 599px){
    /* Header Styles*/
