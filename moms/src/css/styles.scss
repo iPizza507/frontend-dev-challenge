@@ -308,9 +308,9 @@ body{
   left: 0px;
   display: flex;
   align-items: center;
-  
+  text-align: center;
   .container__giveBirth__img{
-    width: 460px;
+    width: 480px;
     height: 360px;
     position: absolute;
     top: 0;
@@ -327,7 +327,7 @@ body{
       transform: translateX(0);
     }
     to{
-      transform: translateX(103%);
+      transform: translateX(100%);
     }
   }
   .container__giveBirth__body{
@@ -345,6 +345,9 @@ body{
         color: $color_violet;
       }
     }
+  }
+  .container__giveBirth__footer__img{
+    width: 75%;
   }
 }
 /*Media Querys*/
