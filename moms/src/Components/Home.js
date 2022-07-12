@@ -1,3 +1,5 @@
+//dependency
+import { Link } from "react-router-dom";
 //img
 import myBgImg from "../images/background__hero--kids.png";
 import myBgImgBeMom from "../images/background_1.png";
@@ -8,11 +10,10 @@ import ImgForModals from "../images/ImgForModals";
 
 export const Home = () => {
   const openModal = (e) => {
-    //search for id
+    //search for id and create CARD (Modal)
     switch (e.id) {
       case 0:
         crearElemnt(e);
-
         break;
       case 1:
         crearElemnt(e);
@@ -120,7 +121,7 @@ export const Home = () => {
                 className="card__body__button"
                 onClick={() => openModal(e)}
               >
-                Mas Info
+                <Link to="#">Mas Info</Link>
               </button>
             </div>
           </div>

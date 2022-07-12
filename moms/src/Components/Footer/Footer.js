@@ -28,7 +28,7 @@ export const Footer = () => {
             <li>
               <Link
                 className="context__list__Link context__list__Link--color"
-                to="#"
+                to="/notFound"
               >
                 Política de Cookies
               </Link>
@@ -36,7 +36,7 @@ export const Footer = () => {
             <li>
               <Link
                 className="context__list__Link context__list__Link--color"
-                to="#"
+                to="/notFound"
               >
                 Política de Privacidad
               </Link>
@@ -44,7 +44,7 @@ export const Footer = () => {
             <li>
               <Link
                 className="context__list__Link context__list__Link--color"
-                to="#"
+                to="/notFound"
               >
                 Términos y condiciones de uso
               </Link>
@@ -52,7 +52,7 @@ export const Footer = () => {
             <li>
               <Link
                 className="context__list__Link context__list__Link--color"
-                to="#"
+                to="/notFound"
               >
                 Cláusula Informativa de Consentimiento
               </Link>

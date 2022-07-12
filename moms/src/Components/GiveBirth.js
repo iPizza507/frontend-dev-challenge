@@ -18,8 +18,12 @@ export const GiveBirth = () => {
         </div>
       </div>
       <div className="container__giveBirth">
-        <img className="container__giveBirth__img" src={myBgImg2} alt=""></img>
         <div className="container__giveBirth__body">
+          <img
+            className="container__giveBirth__img"
+            src={myBgImg2}
+            alt=""
+          ></img>
           <h1 className="container__giveBirth__h1">
             1. Asignarles tareas sencillas
           </h1>

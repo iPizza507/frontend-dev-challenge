@@ -49,7 +49,7 @@ export const HeaderNavBar = () => {
                 <li>
                   <Link
                     className="listMenuHambur__link listMenuHambur__link--color"
-                    to="#"
+                    to="/notFound"
                   >
                     Voy a ser mamá <AiOutlineArrowRight />
                   </Link>
@@ -80,7 +80,7 @@ export const HeaderNavBar = () => {
                 <li>
                   <Link
                     className="listMenuHambur__link listMenuHambur__link--color"
-                    to="#"
+                    to="/notFound"
                   >
                     Aprende a ser mamá
                     <AiOutlineArrowRight />
@@ -89,7 +89,7 @@ export const HeaderNavBar = () => {
                 <li>
                   <Link
                     className="listMenuHambur__link listMenuHambur__link--color"
-                    to="#"
+                    to="/notFound"
                   >
                     Educación para bebes
                     <AiOutlineArrowRight />
