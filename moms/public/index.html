@@ -25,7 +25,7 @@
   <title>React App</title>
 </head>
 
-<body onload="addEv()">
+<body>
   <div id="root" onClick="cerrar()">
 
   </div>
@@ -41,26 +41,26 @@
     };
     window.addEventListener("onClick", () => cerrar())
 
-
-    function addEv() {
-      //search Parent div
-      let doc = document.getElementsByClassName("container__FAQ__question");
-      //search all childrens.. and adding envent -> delete this.
-      for (let i = 0; i < doc.length; i++) {
-        console.log(doc[i].children[0].children[0].children[0].className);
-        doc[i].children[0].addEventListener("click", () => {
-          //this.parentNode.removeChild(this);
-          let hijo = doc[i].children[1];
-
-          if (doc[i].children[1].className === "container__FAQ__answer") {
-            hijo.setAttribute("class", "container__FAQ__answer--display")
-          } else {
-            hijo.setAttribute("class", "container__FAQ__answer")
+    /*onload="addEv()"
+        function addEv() {
+          //search Parent div
+          let doc = document.getElementsByClassName("container__FAQ__question");
+          //search all childrens.. and adding envent -> delete this.
+          for (let i = 0; i < doc.length; i++) {
+            console.log(doc[i].children[0].children[0].children[0].className);
+            doc[i].children[0].addEventListener("click", () => {
+              //this.parentNode.removeChild(this);
+              let hijo = doc[i].children[1];
+    
+              if (doc[i].children[1].className === "container__FAQ__answer") {
+                hijo.setAttribute("class", "container__FAQ__answer--display")
+              } else {
+                hijo.setAttribute("class", "container__FAQ__answer")
+              }
+            });
           }
-        });
-      }
-    }
-
+        }
+    */
   </script>
 </body>
 
