@@ -1,6 +1,7 @@
 //dependency
 import Swal from "sweetalert2";
-
+//components
+import FAQ from "./FAQ";
 export const Form = () => {
   const submitHandler = (e) => {
     e.preventDefault();
@@ -33,8 +34,11 @@ export const Form = () => {
   };
   return (
     <>
+      <FAQ></FAQ>
       <div className="container__formulario">
-        <h1>¿Te quedaste con ganas de saber más?</h1>
+        <h1 className="container__formulario__h1">
+          ¿Te quedaste con ganas de saber más?
+        </h1>
         <h2>¡Déjanos tús comentarios!</h2>
         <form
           action="POST"
@@ -55,6 +59,7 @@ export const Form = () => {
             <option option="papa">Papá</option>
             <option option="niguno">Ninguno</option>
           </select>
+
           <textarea
             className="container__form__textArea"
             id="message"

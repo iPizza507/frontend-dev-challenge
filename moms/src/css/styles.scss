@@ -97,7 +97,7 @@ body{
 }
 
 .container__Search{
-  display: flex;
+  display: none;
   justify-content: center;
   position: fixed;
   top: 50px;
@@ -240,11 +240,67 @@ body{
   right: 10px;
 }
 /* Form Styles*/
+.container__FAQ{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  .container__FAQ_asd{
+    width: 500px;
+    .container__FAQ_asd__h1{
+      color: $color_violet;
+    }
+    .container__FAQ_body{
+      .container__FAQ__question{
+        display: flex;
+        flex-direction: column;
+        .container__FAQ__question__h2{
+          .container__FAQ__question__h2__a{
+            display: flex;
+            justify-content: space-between;
+            text-decoration: none;
+            color: black;
+            border-style: dashed;
+            border-width: 0px 0px 1px 0px;
+            margin: 0;
+            padding: 10px;
+            .container__FAQ__question__h2__a__icon{
+              margin: 0 10px;
+            }
+          }
+        }
+        .container__FAQ__answer{
+          display: none;
+        }
+        .container__FAQ__answer--display{
+          animation-name: showClip;
+          animation-duration:1s;
+          .container__FAQ__answer__h4{
+            margin: 0;
+            font-weight:400;
+          }
+        }
+        @keyframes showClip {
+          from{
+            clip-path: inset(0% 0% 100% 0%);
+          }
+          to{
+            clip-path: inset(0% 0% 0% 0%);
+          }
+        }
+      }
+    }
+  }
+}
+
 .container__formulario{
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 100px 200px;
+  .container__formulario__h1{
+    color: $color_violet;
+  }
   .container__form{
     width: 320px;
     margin: auto 0px auto 20px ;
@@ -263,6 +319,7 @@ body{
     background-color: #8650cc;
   }
 }
+
 .container__form__submit, .card__body__button{
     background-color: $color_violet;
     border-style: none;
@@ -448,6 +505,12 @@ body{
   }
   .card{
       width: 90%;
+  }
+  /*Form styles*/
+  .container__FAQ{
+    .container__FAQ_asd{
+      width: 80%;
+    }
   }
   /*Parto*/
   .container__giveBirth{
