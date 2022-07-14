@@ -8,7 +8,7 @@ export const LearnToBeAMom = () => {
         <img className="logo__img" src={myBgImg} alt=""></img>
         <div className="container__text">
           <h1 className="text--color container__text__h1">
-            A ser<p className="container__text__h1__p"> mamá </p>
+            Ser<p className="container__text__h1__p"> mamá </p>
             también se <p className="container__text__h1__p"> Aprende!</p>
           </h1>
           <h3 className="text--color container__text__h3">
