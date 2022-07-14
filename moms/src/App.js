@@ -35,7 +35,7 @@ function App() {
 
           <Route path="/learnToBeAMom" element={<LearnToBeAMom />}></Route>
           <Route path="/babys" element={<Children />}></Route>
-          <Route path="/children" element={<Children />}></Route>
+          <Route path="/children" element={<NotFound />}></Route>
 
           <Route path="/faq" element={<FAQ />}></Route>
           <Route path="/notFound" element={<NotFound />}></Route>
