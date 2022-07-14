@@ -5,6 +5,10 @@ npm install react-icons // para poder usar iconos
 npm install react-router-dom // para poder usar la navegacion
 npm start //para iniciar la app
 
+## Figma enlace
+
+https://www.figma.com/file/2r4F1rgKSotjIAoRnSAhOW/Figma-Test-(Copy)?node-id=0%3A1
+
 ## Descripción
 
 **Frontend DEV Challenge** es una prueba de admisión para desarrolladores en HTML, CSS, JavaScript.
