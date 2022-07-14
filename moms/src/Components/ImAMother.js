@@ -1,18 +1,17 @@
-//components
-import myBgImg from "../images/background_1.png";
-import ImgiWantToBeaMother from "../images/ImgiWantToBeaMother";
-
+//img
+import myBgImg from "../images/background_4.png";
+import ImgImAMother from "../images/ImgImAMother";
 import CardItems from "./CardItems";
-
-export const WantToBeaMother = () => {
+export const ImAMother = () => {
   return (
     <>
       <div className="container">
         <img className="logo__img" src={myBgImg} alt=""></img>
         <div className="container__text">
           <h1 className="text--color container__text__h1">
-            Quiero ser<p className="container__text__h1__p"> la mejor </p>
-            <p className="container__text__h1__p">mamá</p> de mi mejor/es hijo/s
+            Vas a ser<p className="container__text__h1__p"> mamá, </p>te sientes
+            un poco ilusionada, feliz pero a la vez
+            <p className="container__text__h1__p"> llena de dudas. </p>
           </h1>
           <h3 className="text--color container__text__h3">
             Conoce nuestros
@@ -21,7 +20,7 @@ export const WantToBeaMother = () => {
         </div>
       </div>
       <div className="cards__section">
-        {ImgiWantToBeaMother.map((e) => (
+        {ImgImAMother.map((e) => (
           <CardItems datos={e} />
         ))}
       </div>
@@ -29,4 +28,4 @@ export const WantToBeaMother = () => {
   );
 };
 
-export default WantToBeaMother;
+export default ImAMother;

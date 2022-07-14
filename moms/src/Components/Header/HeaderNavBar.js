@@ -5,6 +5,7 @@ import {
   AiOutlineMenu,
   AiOutlineClose,
   AiOutlineArrowRight,
+  AiOutlineSearch,
 } from "react-icons/ai";
 //state
 import { useState } from "react";
@@ -16,6 +17,7 @@ export const HeaderNavBar = () => {
   const [icon, setIcon] = useState(AiOutlineMenu);
 
   //if u click, show them.
+
   const moveMenu = () => {
     let menuDeployment = document.getElementById("menuDeployment");
     if (menuDeployment.style.display === "block") {
@@ -26,6 +28,15 @@ export const HeaderNavBar = () => {
       setIcon(AiOutlineClose);
     }
   };
+  const moveSearch = () => {
+    let searchDeployment = document.getElementById("searchDeployment");
+    searchDeployment.style.display = "flex";
+  };
+  const moveSearch2 = () => {
+    let searchDeployment = document.getElementById("searchDeployment");
+    searchDeployment.style.display = "none";
+  };
+
   return (
     <>
       <nav className="navBar">
@@ -49,7 +60,7 @@ export const HeaderNavBar = () => {
                 <li>
                   <Link
                     className="listMenuHambur__link listMenuHambur__link--color"
-                    to="/notFound"
+                    to="/imMother"
                   >
                     Voy a ser mamá <AiOutlineArrowRight />
                   </Link>
@@ -80,7 +91,7 @@ export const HeaderNavBar = () => {
                 <li>
                   <Link
                     className="listMenuHambur__link listMenuHambur__link--color"
-                    to="/notFound"
+                    to="/learnToBeAMom"
                   >
                     Aprende a ser mamá
                     <AiOutlineArrowRight />
@@ -89,7 +100,7 @@ export const HeaderNavBar = () => {
                 <li>
                   <Link
                     className="listMenuHambur__link listMenuHambur__link--color"
-                    to="/notFound"
+                    to="/babys"
                   >
                     Educación para bebes
                     <AiOutlineArrowRight />
@@ -98,7 +109,7 @@ export const HeaderNavBar = () => {
                 <li>
                   <Link
                     className="listMenuHambur__link listMenuHambur__link--color"
-                    to="/form"
+                    to="/children"
                   >
                     Educación para niños
                     <AiOutlineArrowRight />
@@ -115,12 +126,33 @@ export const HeaderNavBar = () => {
         </div>
 
         <div className="navBar__search">
-          <input type="search" id="searchDeployment" placeholder="Buscar.." />
-          <button type="submit" className="navBar__search__submit">
+          <Link
+            to="#"
+            className="container__Search__a"
+            onClick={() => moveSearch()}
+          >
             <img className="navBar__search__img" src={lupa} alt="una img" />
-          </button>
+          </Link>
         </div>
       </nav>
+
+      <div className="container__Search" id="searchDeployment">
+        <input
+          type="search"
+          className="container__Search__input"
+          placeholder="Buscar.."
+        />
+        <Link
+          to="#"
+          className="container__Search__a"
+          onClick={() => moveSearch2()}
+        >
+          <AiOutlineClose></AiOutlineClose>
+        </Link>
+        <Link to="#" className="container__Search__a">
+          <AiOutlineSearch></AiOutlineSearch>
+        </Link>
+      </div>
     </>
   );
 };

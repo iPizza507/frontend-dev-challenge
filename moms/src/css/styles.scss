@@ -24,14 +24,15 @@ body{
   box-sizing: border-box;
   font-family: 'Source Sans Pro';
 }
-/* Header Styles*/
 
+/* Header Styles*/
 .navBar{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 40px;
-  padding: 5px 0px;
+  margin: 0 0;
+  padding: 5px 40px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
   .listMenuHambur__title{
     color: $color_violet;
     margin: 15px 0px 5px 16px;
@@ -55,8 +56,7 @@ body{
     color: black;
   }
   .listMenuHambur__link:hover{
-    text-decoration: underline;
-    text-decoration-color: $color_violet;
+    color: $color_violet;
   }
   #menuDeployment{
     display: none;
@@ -85,36 +85,44 @@ body{
   width: 100%;
 }
 .navBar__search{
-  display: flex;
-  align-items: center;
-  border: solid 1px;
-  border-radius: 4px;
-  height: 28px;
+  margin: 0;
   border-color: rgb(152, 152, 152);
-  #searchDeployment{
-    position: relative;
-    top: 0;
-    right: 0;
-    background-color: transparent;
-    border-style: none;
-    width: 100px;
-    height: 20px;
-  }
-  .navBar__search__submit{
-    background-color: transparent;
-    margin: 0px;
-    padding: 0px;
-    border-style: none;
-    display: flex;
-    align-items: center;
-  }
   .navBar__search__img{
     background-color: $color_violet;
     border-radius: 2px;
-    margin: 2px;
-    padding: 2px;
+    margin: 0;
+    padding: 5px;
     color: white;
   }
+}
+
+.container__Search{
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  z-index: 1;
+  animation: opacityCard 2s;
+
+  .container__Search__input{
+  padding: 16px;
+  background-color: white;
+  border-style: dashed;
+  border-color: rgb(202, 202, 202);
+  border-radius: 4px;
+  width: 80%;
+  height: 20px;
+  text-align: center;
+  }
+  .container__Search__a{
+    font-size: 32px;
+    color: $color_violet;
+  }
+}
+
+.container__Search:active{
+  opacity: 0;
 }
 
 /* Footer Styles*/
@@ -135,18 +143,18 @@ body{
   width: 88%;
 }
 .footer__context__list{
-  list-style: none;
+  list-style: none; 
+  display: flex;
+  flex-direction: row;
+  .context__list__Link{
+  text-decoration: none;
+  }
+  .context__list__Link:hover{
+    color: $color_violet;
+}
 }
 .footer__context__list li{
   margin: 20px;
-}
-.context__list__Link:hover{
-  text-decoration: underline;
-  text-decoration-color: white;
-}
-.footer__context__list--display{
-  display: flex;
-  flex-direction: row;
 }
 .footer__context--margin{
   margin: 0 15%;
@@ -262,14 +270,15 @@ body{
     color: white;
   }
 /*Be Mother*/
-.cards__toBeMother{
+.cards__section{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 50px;
+  gap: 2rem;
 }
 
 .card{
-  width: 200px;
+  width: 220px;
   border-radius: 4px;  
   margin: 0 auto;
   box-shadow: 10px 10px 20px gray;
@@ -281,6 +290,7 @@ body{
   left: 0;
   animation-name: opacityCard;
   animation-duration: 2s;
+  transform: scale(1.1);
 }
 @keyframes opacityCard {
   from{
@@ -298,13 +308,16 @@ body{
 .card__body__h6{
   margin: 0 0 10px 5px;
   color: $color_rose ;
+  text-align: left;
 }
 .card__body__h5{
   margin: 5px;
+  text-align: left;
 }
 .card__body__p{
   margin: 5px;
   font-size: 15px;
+  text-align: justify;
 }
 
 /*Parto*/
@@ -371,11 +384,14 @@ body{
 /*Media Querys*/
 @media all and (max-width: 599px){
    /* Header Styles*/
-  .navBar__search{
-      border-style: none;
+   .container__Search{
+    .container__Search__input{
+    width: 60%;
+    }
   }
-  #searchDeployment{
-      display: none !important;
+  
+  .container__Search:active{
+    opacity: 0;
   }
    /* Home Styles*/
   .container__text{
@@ -425,10 +441,10 @@ body{
       text-align: center;
   }
   /*Be Mother*/
-  .cards__toBeMother{
+  .cards__section{
       grid-template-columns: repeat(1, 1fr);
       margin: 20px;
-      gap: 1em;
+      gap: 2em;
   }
   .card{
       width: 90%;

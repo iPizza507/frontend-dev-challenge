@@ -24,7 +24,7 @@ export const Footer = () => {
         </div>
 
         <div className="footer__context">
-          <ul className="footer__context__list footer__context__list--display">
+          <ul className="footer__context__list">
             <li>
               <Link
                 className="context__list__Link context__list__Link--color"

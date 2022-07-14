@@ -1,3 +1,6 @@
+//dependency
+import Swal from "sweetalert2";
+
 export const Form = () => {
   const submitHandler = (e) => {
     e.preventDefault();
@@ -6,12 +9,27 @@ export const Form = () => {
     const email = document.getElementById("inputEmail").value;
     //validacion de EMAIL
     if (email === "") {
-      alert("El campo está vacío");
+      return Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Los campos no deben estar vacíos!",
+        footer: '<a href="">¿Por qué tengo este problema?</a>',
+      });
     } else if (!regexEmail.test(email)) {
-      alert("El campo es erroneo");
+      return Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "El email es incorrecto!",
+        footer: '<a href="">¿Por qué tengo este problema?</a>',
+      });
     }
 
-    return alert("Enviado!");
+    return Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Un error inesperado!",
+      footer: '<a href="">¿Por qué tengo este problema?</a>',
+    });
   };
   return (
     <>
@@ -28,7 +46,6 @@ export const Form = () => {
             className="container__form__email"
             type="email"
             placeholder="Inserte tu: correo"
-            required
           ></input>
 
           <select className="container__form__select">

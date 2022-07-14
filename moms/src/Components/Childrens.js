@@ -1,17 +1,18 @@
 //img
-import myBgImg from "../images/background_4.png";
+import myBgImg from "../images/background_2.png";
 import myLogoEs from "../images/logoES.png";
 import myBgImg2 from "../images/background_3.png";
 
-export const GiveBirth = () => {
+export const Children = () => {
   return (
     <>
       <div className="container">
         <img className="logo__img" src={myBgImg} alt=""></img>
         <div className="container__text">
           <h1 className="text--color container__text__h1">
-            ¿Parto?<p className="container__text__h1__p"> Mira lo </p>
-            <p className="container__text__h1__p">que te espera </p>mamá!
+            Los<p className="container__text__h1__p"> niños son </p>
+            <p className="container__text__h1__p">algo especial </p>para
+            nosotros!
           </h1>
           <h3 className="text--color container__text__h3">
             Conoce nuestros
@@ -35,7 +36,7 @@ export const GiveBirth = () => {
             sea más fácil, puede ser conveniente que un adulto también las haga.
             Por ejemplo, ayudar a lavar los platos o hacer la colada con alguno
             de los progenitores es una buena manera de empezar. Será el primer
-            paso para que adquieran autonomía: ser sus modelos.{" "}
+            paso para que adquieran autonomía: ser sus modelos.
             <p className="container__giveBirth__h3__p">
               Pueden recoger los platos mientras uno de los progenitores los
               empieza a lavar.
@@ -60,4 +61,4 @@ export const GiveBirth = () => {
   );
 };
 
-export default GiveBirth;
+export default Children;
